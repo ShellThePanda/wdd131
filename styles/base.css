@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #08120f;
+  --surface: #111a17;
+  --primary: #58b368;
+  --primary-dark: #3f7f53;
+  --accent: #a4f187;
+  --accent-strong: #d4ffb2;
+  --text: #e9f7ec;
+  --muted: #92a38f;
+  --border: rgba(148, 255, 145, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top left, rgba(88, 179, 104, 0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(164, 241, 135, 0.12), transparent 28%),
+    var(--bg);
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: transparent;
+  color: inherit;
+  line-height: 1.6;
+}
+
+header span {
+  display: block;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  background: var(--surface);
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background: var(--text);
+  color: var(--bg);
+  transform: translateY(-1px);
+}
+
+main {
+  width: min(100%, 840px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-strong);
+  margin-top: 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  color: var(--accent);
+}
+
+button,
+a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(88, 179, 104, 0.12);
+  color: var(--text);
+  cursor: pointer;
+}
+
+button.primary,
+a.button.primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-color: transparent;
+}
+
+.card {
+  background: rgba(17, 26, 23, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+}
+
+.text-muted {
+  color: var(--muted);
+}
